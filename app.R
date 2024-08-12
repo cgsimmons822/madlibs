@@ -3,11 +3,12 @@ library(useself)
 
 generate_story <- function(noun, verb, adjective, adverb) {
   cat("here we generate the story with the chosen inputs")
-  glue::glue("
+  text <- glue::glue("
     Once upon a time, there was a {adjective} {noun} who loved to
     {verb} {adverb}. It was the funniest thing ever!
   ")
   cat("Done!")
+  return(text)
 }
 
 ui <- fluidPage(
